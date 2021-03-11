@@ -18,8 +18,6 @@ FetchContent_Declare(aegis-cpp
 
 FetchContent_MakeAvailable(aegis-cpp)
 
-set(REQUIRED_LIBS OpenSSL::SSL ZLIB::ZLIB Spdlog::Spdlog JSON::JSON Asio::Asio Threads::Threads)
-
 add_executable(bot app.cpp)
 set_property(TARGET bot PROPERTY CXX_STANDARD 14)
 set_property(TARGET bot PROPERTY CXX_STANDARD_REQUIRED ON)

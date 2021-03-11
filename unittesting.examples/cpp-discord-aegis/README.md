@@ -33,13 +33,15 @@
 
    Right click on the CMakeLists.txt and click on CMake Settings
 
+   Change the `Configuration type` to `Release`.
+
    Change CMake toolchain file to a full path to vcpkg.cmake e.g.
 
    ```plain
    ${projectDir}/vcpkg/scripts/buildsystems/vcpkg.cmake
    ```
 
-   Add -DBUILD_EXAMPLES=1 -DCMAKE_CXX_STANDARD=17 to "CMake command arguments" under "Command arguments"
+   Add `-DMSVC=1 -DBUILD_SHARED_LIBS=0` to "CMake command arguments" under "Command arguments"
 
    Save the file. Visual Studio should start cmake generation process again.
    This time there should be no error.
