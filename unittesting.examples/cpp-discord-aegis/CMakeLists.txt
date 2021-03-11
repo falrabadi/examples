@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.11)
 project(example)
 
-option(MSVC     "Using Visual Studio to build" ON)
-
 find_package(Git)
 
 if(NOT Git_FOUND)
@@ -15,11 +13,24 @@ endif()
 # Base on https://medium.com/analytics-vidhya/c-dependency-management-with-cmakes-fetchcontent-4ceca4693a5d
 include(FetchContent)
 FetchContent_Declare(aegis-cpp
-  GIT_REPOSITORY "https://github.com/zeroxs/aegis.cpp.git"
-  GIT_TAG "e033f7b894dd3e4ec60c9b1743745b86766fd8f4")
+  GIT_REPOSITORY "https://github.com/krerkkiat/aegis.cpp.git"
+  GIT_TAG "a4cc7721f0e71182431b4172254a19209279de06")
 
 FetchContent_MakeAvailable(aegis-cpp)
 
-add_executable(bot app.cpp)
+set(REQUIRED_LIBS OpenSSL::SSL ZLIB::ZLIB Spdlog::Spdlog JSON::JSON Asio::Asio Threads::Threads)
 
-target_link_libraries(bot aegis)
+add_executable(bot app.cpp)
+set_property(TARGET bot PROPERTY CXX_STANDARD 14)
+set_property(TARGET bot PROPERTY CXX_STANDARD_REQUIRED ON)
+target_link_libraries(bot PRIVATE Aegis::aegis)
+
+if(MSVC)
+    add_compile_options("/W3" "$<$<CONFIG:RELEASE>:/O2>")
+endif()
+
+target_include_directories(bot
+	PUBLIC
+	$<INSTALL_INTERFACE:include>
+	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+)
