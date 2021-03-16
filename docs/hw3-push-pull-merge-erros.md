@@ -170,7 +170,7 @@ other-text
 
 Here are the meaning of all these marking.
 
-1. `<<<<<<<` follows, on the same line, by HEAD or commit id. This indicates the start of your conent on HEAD or on the commit id.
+1. `<<<<<<<` follows, on the same line, by HEAD or commit id. This indicates the start of your content on HEAD or on the commit id.
 2. `=======` indicates the end of your content and the begining of content from others.
 3. `>>>>>>` follows, on the same line, by branch name or commit id. This indicates the end of content by others. 
 
