@@ -64,7 +64,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-The main mesage is that
+The main message is that
 
 > Your branch and 'origin/main' have diverged.
 > and have 1 and 12 different commits each, respectively.
