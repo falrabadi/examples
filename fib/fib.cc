@@ -12,7 +12,7 @@ int fib_recursive(int n) {
     }
 
     /** <h4>Implementation Note</h4>
-     * Instead of saving the values and add them before returning them
+     * Instead of saving the values and adding them before returning them
      * we saved ourselves from declaring varaibles by returning
      * the value from the expression directly.
      * */
