@@ -1,101 +1,158 @@
-//Akshobh Mirapurkar
-//HW11: Ballot cryptograph
-//November 12, 2019
-#include<iostream>
-#include<fstream>
-#include<vector>
-#include<string>
-#include<algorithm>
+/**
+ * @file    HW11.cc
+ * @author  Akshobh Mirapurkar
+ * @editor: Nathaniel Buchanan
+ * @date    November 12, 2019
+ *          Last edited: March 15, 2021
+ * @university: Ohio University
+ * @college: Russ College of Engineering
+ * @brief   This program is an example of a three ballot
+ *          system for voting. Known as Ballot Cryptograph
+ */
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <algorithm>
 
-int main(){
-    //Declare an ifstream object
+int main()
+{
+    /// Declare an ifstream object
     std::ifstream instream;
+    /// Open a text file with test names
     instream.open("HW10Test_test.txt");
-    //To read in Ballot keyword
+    /// Used to read in Ballot keywords
     std::string temp;
     std::string name1;
     std::string name2;
-    //ints to hold counts
+    /// integers that to hold the counts
     int ballot_count = 0;
     int name1_count = 0;
     int name2_count = 0;
     bool is_valid = true;
     instream >> temp;
-    //Ignore the white spaces
-    if(instream.peek() == '\n'){
+
+    /// Ignores the white spaces
+    if(instream.peek() == '\n')
+    {
         instream.ignore(100, '\n');
     }
-    while(!instream.eof()){
-        if(temp == "Ballot"){
+    /// Go until the end of the file
+    while(!instream.eof())
+    {
+        /// If the temp word is Ballot
+        if(temp == "Ballot")
+        {
             ballot_count++;
         }
-        //Till count is 3
-        while(ballot_count < 4){
-            //For checks
+        /// While loop that goes until 4
+        while(ballot_count < 4)
+        {
+            /// Checks to see if it is valid or not
             is_valid = true;
-            if(instream.peek() == '\n'){
+            /// Ignores the white spaces
+            if(instream.peek() == '\n')
+            {
                 instream.ignore(100, '\n');
             }
             char h;
-            //To get the vote number
+            /// Get the vote number
             instream.get(h);
             instream >> temp;
-            //Function to remove the spaces
+
+            /// Function that removes the spaces
             remove_if(temp.begin(), temp.end(), isspace);
-            if(instream.peek() == '\n'){
+
+            /// Ignore the white spaces
+            if(instream.peek() == '\n')
+            {
                 instream.ignore(100, '\n');
             }
+
+            ///used for name1
             name1 = temp;
             name1_count += h;
-            //Empties out temp
+            /// Empty the temp string
             temp = "";
-            if(instream.peek() == '\n'){
+            
+            /// Ignore the white spaces
+            if(instream.peek() == '\n')
+            {
                 instream.ignore(100, '\n');
             }
-            //Get the vote number
+
+            /// Get the number of the vote with instream
             instream.get(h);
             instream >> temp;
-            //Function to remove the spaces
+
+            /// Function that removes the spaces
             remove_if(temp.begin(), temp.end(), isspace);
-            if(instream.peek() == '\n'){
+
+            /// Ignore the white spaces
+            if(instream.peek() == '\n')
+            {
                 instream.ignore(100, '\n');
             }
+
+            ///used for name2
             name2 = temp;
             name2_count += h;
-            if(instream.peek() == '\n'){
+
+            /// Ignore the white spaces
+            if(instream.peek() == '\n')
+            {
                 instream.ignore(100, '\n');
             }
+
             instream >> temp;
-            if(instream.peek() == '\n'){
+
+            /// Ignore the white spaces
+            if(instream.peek() == '\n')
+            {
                 instream.ignore(100, '\n');
             }
-            //Increment ballot count
+
+            /// Increment the total ballot count
             ballot_count++; 
         }
-    //Check #1
-    //Math using character value 
-    if(name1_count < '0' * 3 + 1 || name2_count < '0' * 3 + 1){
+    /// Check #1
+    /// Math that is using character value 
+    /// If the name count is less than the equation below, this would mean
+    /// that a specific row is not correctly filled out
+    if(name1_count < '0' * 3 + 1 || name2_count < '0' * 3 + 1)
+    {
         is_valid = false;
         std::cout << "Row not filled out" << std::endl;
-    } else if(name1_count > '1' * 3 - 1 || name2_count > '1' * 3 - 1){
+    } 
+    /// if a person votes for more than one candidate, it is not a valid ballot
+    else if(name1_count > '1' * 3 - 1 || name2_count > '1' * 3 - 1)
+    {
         is_valid = false;
         std::cout << "Too many votes for one candidate" << std::endl;
-    } else if(name1_count == name2_count){
+    } 
+    /// if the counts are the same, then there is no winner
+    else if(name1_count == name2_count)
+    {
         is_valid = false;
         std::cout << "Preferred candidate unclear" << std::endl;
     }
-    //Printing out the winner
-    if((name1_count < name2_count) && is_valid){ 
+    /// If name2 has a larger count, name2 is the winner
+    if((name1_count < name2_count) && is_valid)
+    { 
         std::cout << "Winner: " << name2 << std::endl;
-    } else if (is_valid){
+    } 
+    /// If name1 has a larger count, then name1 is the winner
+    else if (is_valid)
+    {
         std::cout << "Winner: " << name1 << std::endl;
     }
-    //Resetting the counts
+
+    /// Reset the the counts for the name1, name2, and the ballot
     name1_count = 0;
     name2_count = 0;
     ballot_count = 0;
 }
-
-return 0;
+    /// end of the main function
+    return 0;
 }
     
