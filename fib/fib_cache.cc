@@ -1,11 +1,8 @@
 /**
  * @file fib_cache.cc
- * @author Krerkkiat Chusap 
- * @editor: Nathaniel Buchanan
- * @date Last edited: March 15, 2021
  * @brief Implementation of the FibCache class.
  * 
- * All the documentation for these member functions are in the header file already.
+ * All the documentation for these member functions are in the .h file already.
  * 
  */
 #include "fib.h"
