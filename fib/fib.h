@@ -1,5 +1,8 @@
 /**
  * @file fib.h
+ * @author Krerkkiat Chusap 
+ * @editor: Nathaniel Buchanan
+ * @date Last edited: March 15, 2021
  * @brief Define functions to calculate fibonacci.
  * 
  * This is the include file for the fibonacci library.

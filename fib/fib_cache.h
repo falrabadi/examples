@@ -1,5 +1,8 @@
 /**
  * @file fib_cache.h
+ * @author Krerkkiat Chusap 
+ * @editor: Nathaniel Buchanan
+ * @date Last edited: March 15, 2021
  * @brief A class definition for FibCache.
  * 
  */
@@ -11,13 +14,13 @@
   * @class FibCache
   * @brief Calculating Fibonacci with value caching
   *
-  * The class has internal vector that save the calulated values of fibbonacci number
+  * The class has internal vector that save the calculated values of Fibonacci number
   * at position `n`. Thus, when the same value is requested again, the cached
   * values is return.
   */
 class FibCache {
 private:
-    int cache_size; //!< The length of the slot of cahce.
+    int cache_size; //!< The length of the slot of cache.
     std::vector<int> cache; //!< Internal cache storage. It is based on vector.
 public:
     /**
