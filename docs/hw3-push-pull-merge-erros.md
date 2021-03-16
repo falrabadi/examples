@@ -1,6 +1,6 @@
 # Errors during git push/pull/merge
 
-When I try to push my comits to GitHub, I got an error
+When I try to push my commits to GitHub, I got an error
 
 ```console
 To github.com:OU-CS3560/hw3-git-p1-entire-class-s20-21.git
