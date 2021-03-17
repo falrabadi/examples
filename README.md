@@ -1,5 +1,7 @@
 # CS3560 - Example Project
 
+This repo is used for other students to practice git pull requests.
+
 Example project that uses Doxygen, Makefile, Catch2, Travis CI.
 This project is also used for students to practice with git pull requests
 
@@ -41,7 +43,7 @@ ssh username@pu1.cs.ohio.edu
 
 Don't forget to replace the `username` with your actual username (it is not the same one as the email handle). If you forget your username, or password you can contact the system administrator, Mr. Carl Hawes.
 
-If the error mention the ssh command not found, you need to enable OpenSSH client feature by search for "Manage optional features" in the start menu,
+If the error mentioned the ssh command not found, you need to enable OpenSSH client feature by search for "Manage optional features" in the start menu,
 and click "Add a feature", then search for "OpenSSH Client", and install it.
 
 For example, here is the output from the using `ssh changliu@pu1.cs.ohio.edu` in command prompt
@@ -101,11 +103,11 @@ Follow the same steps for Windows, but use "Terminal" app instead.
 
 ### Connect via vscode
 
-By using the extension call Visual Studio Code Remote Development [https://code.visualstudio.com/docs/remote/remote-overview](https://code.visualstudio.com/docs/remote/remote-overview), you can use vscode on your laptop (or from PC in the classroom; see the first extra note) to edit a file on school server.
+By using the extension call Visual Studio Code Remote Development [https://code.visualstudio.com/docs/remote/remote-overview](https://code.visualstudio.com/docs/remote/remote-overview), you can use vscode on your laptop (or from PC in the classroom; see the first extra note) to edit a file on the school server.
 
-You will also have access to GUI for git that vscode has as well. But do not forget to still study which Git command do what since this class is focusing on that.
+You will also have access to GUI for git that vscode has as well. But do not forget to still study which Git command does what since this class is focusing on that.
 
-To have a better experience, you will have to use SSH key authentication where you are not require to type password every time you are logging to the school server. Please see this article for how to do it: [https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
+To have a better experience, you will have to use SSH key authentication where you are not required to type password every time you are logging into the school server. Please see this article for how to do it: [https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server](https://www.digitalocean.com/community/tutorials/how-to-configure-ssh-key-based-authentication-on-a-linux-server)
 
 This is what I usually have in my ~/.ssh/config for the school server.
 

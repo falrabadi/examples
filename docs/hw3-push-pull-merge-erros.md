@@ -14,6 +14,8 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
 This is happening when someone else is pushing their commits to GitHub before you do.
+Dr. Liu went over this in the lecture on 02/02/2021, you can review also review that. This
+document however, will go over it step by step. You can also read through
 Dr. Liu went over this in the lecture on 02/02/2021, you can also review that. This
 document however, will goes over it step by step. You can also read through
 this article [https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
@@ -46,7 +48,7 @@ From github.com:OU-CS3560/hw3-git-p1-entire-class-s20-21
 fatal: Not possible to fast-forward, aborting.
 ```
 
-From a quick glance, everything seems fine. However, on the last line, Git tells you can there is a fatal error
+From a quick glance, everything seems fine. However, on the last line, Git tells you there is a fatal error
 where Git cannot fast-forward.
 
 If you run `git status`, this will be the result
@@ -70,7 +72,7 @@ The main message is that
 > and have 1 and 12 different commits each, respectively.
 >  (use "git pull" to merge the remote branch into yours)
 
-Git is suggesting that you run `git pull`, but we did run it already and it fail (remember "fatal: Not possible to fast-forward, aborting").
+Git is suggesting that you run `git pull`, but we did run it already and it failed (remember "fatal: Not possible to fast-forward, aborting").
 
 If you run, `git log --graph --all --decorate --oneline`, you will see the diverging commits. Your
 result may be different.
@@ -124,16 +126,13 @@ auto-merge that fails.
 Let fix this by open the file in your favorite editor, you will see something like this:
 
 ```plain
-<<<<<<< HEAD
 Creating merge conflict
 ||||||| 7yylnxo
-=======
 Ruby
 Red
 Line 0 
 puts "Hello World!\n"
 tk.END
->>>>>>> origin/main
 ```
 
 Or this,
@@ -141,11 +140,8 @@ Or this,
 ```plain
 other-content
 
-<<<<<<< HEAD
 content-from-head
-=======
 content-from-origin-main
->>>>>>> origin/main
 
 other-text
 ```
@@ -157,13 +153,10 @@ The main structure are these alien looking marks:
 ```plain
 other-content
 
-<<<<<<< HEAD
 content-from-head
 ||||||| 7yylnxo
 common-content
-=======
 content-from-origin-main
->>>>>>> origin/main
 
 other-text
 ```
