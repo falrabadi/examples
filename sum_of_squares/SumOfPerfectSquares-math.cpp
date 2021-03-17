@@ -5,6 +5,12 @@
 #include <string>
 using namespace std;
 
+/**
+ * Calculates the smallest possible sum of perfect squares that add
+ * up to a given number 'n'
+ * 
+ * @return int
+ */
 int sum_of_squares(int n)
 {
 
