@@ -4,6 +4,12 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * Determines the smallest sqaure sum of a given number and returns true or false
+ * when a perfect square reaches it's smallest possible value 
+ *
+ * @return bool
+ */
 bool sos(unsigned long n, long long k){
     if(k == 1){
         return pow(floor(sqrt(n)), 2) == n;
@@ -16,6 +22,12 @@ bool sos(unsigned long n, long long k){
     }
     return false;
 }
+
+/**
+ * Iterates through number i linearly until the conditions for the some of squares function are met
+ * 
+ * @return unsigned long
+ */
 unsigned long sum_of_squares(unsigned long n){
     unsigned long  i = 1;
     while(!sos(n,i)){
