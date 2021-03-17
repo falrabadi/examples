@@ -7,12 +7,12 @@ For Makefile related examples, please see `make.example\d+`. For focus example o
 
 ## Contributing
 
-First thing that you will notice is that you cannot make any push to the repository directly. This is is usally the case for all opensource project.
+First thing that you will notice is that you cannot make any push to the repository directly. This is is usually the case for all opensource project.
 What you have to do is fork the repository to your own GitHub account. With this new repository, you will have full control over the
 repository including the ability to push commits.
 
 After you finish part or all of the work, it is when the pull request is comming in. To be able to create one, you will need to "compare across fork"
-and selec a branch from your repository.
+and select a branch from your repository.
 
 ## Technological stack
 
