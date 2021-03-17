@@ -3,8 +3,9 @@
 This repo is used for other students to practice git pull requests.
 
 Example project that uses Doxygen, Makefile, Catch2, Travis CI.
+This project is also used for students to practice with git pull requests
 
-This is a simple project that contain some of the tools used in the class. For example,
+This is a simple project that contains some of the tools used in the class. For example,
 
 - .gitignore
 - Git with commit message in Commitizen convention ([https://commitizen.github.io/cz-cli/](https://commitizen.github.io/cz-cli/)).
@@ -13,6 +14,7 @@ This is a simple project that contain some of the tools used in the class. For e
 - Catch2
 - Travis CI (The idea of integrating this into class is heavily influenced by Mr. Robert Foreman).
 - maybe Google Test Framework (using Docker image)
+- This repo is also used for students to practice git pull requests
 
 ## Git with commit message in Commitizen convention
 
