@@ -14,10 +14,8 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
 This is happening when someone else is pushing their commits to GitHub before you do.
-Dr. Liu went over this in the lecture on 02/02/2021, you can review also review that. This
-document however, will go over it step by step. You can also read through
 Dr. Liu went over this in the lecture on 02/02/2021, you can also review that. This
-document however, will goes over it step by step. You can also read through
+document however, will go over it step by step. You can also read through
 this article [https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
 If you read the error message carefully, you will notice that Git hint at you to perform pull before you are trying to push again.
@@ -126,13 +124,16 @@ auto-merge that fails.
 Let fix this by open the file in your favorite editor, you will see something like this:
 
 ```plain
+<<<<<<< HEAD
 Creating merge conflict
 ||||||| 7yylnxo
+=======
 Ruby
 Red
 Line 0 
 puts "Hello World!\n"
 tk.END
+>>>>>>> origin/main
 ```
 
 Or this,
@@ -140,8 +141,11 @@ Or this,
 ```plain
 other-content
 
+<<<<<<< HEAD
 content-from-head
+=======
 content-from-origin-main
+>>>>>>> origin/main
 
 other-text
 ```
@@ -153,10 +157,13 @@ The main structure are these alien looking marks:
 ```plain
 other-content
 
+<<<<<<< HEAD
 content-from-head
 ||||||| 7yylnxo
 common-content
+=======
 content-from-origin-main
+>>>>>>> origin/main
 
 other-text
 ```
@@ -164,7 +171,7 @@ other-text
 Here are the meaning of all these marking.
 
 1. `<<<<<<<` follows, on the same line, by HEAD or commit id. This indicates the start of your content on HEAD or on the commit id.
-2. `=======` indicates the end of your content and the begining of content from others.
+2. `=======` indicates the end of your content and the beginning of content from others.
 3. `>>>>>>` follows, on the same line, by branch name or commit id. This indicates the end of content by others. 
 
 To resolve a merge conflict, is to decide which content you want to keep: your content, their content, or both. In a team project, we will want to consult with
