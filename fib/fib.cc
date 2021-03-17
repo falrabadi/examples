@@ -6,6 +6,11 @@
  */
 #include "fib.h"
 
+/**
+ * Calculates fibonacci number recursively given a number 'n'
+ * 
+ * @return int
+ */
 int fib_recursive(int n) {
     if (n == 1 || n == 2) {
         return 1;
@@ -19,6 +24,11 @@ int fib_recursive(int n) {
     return fib_recursive(n - 1) + fib_recursive(n - 2);
 }
 
+/**
+ * Calculates fibonacci number iteratively given a number 'n'
+ * 
+ * @return int
+ */
 int fib_iterative(int n) {
     int a, b, temp;
     a = 1;
