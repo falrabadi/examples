@@ -130,8 +130,3 @@ https://stackoverflow.com/questions/58400564/tcl-tk-tkinter-not-installing-via-h
 
 
 ## this is also used for students to practice git pull requests
-
-## Quiz 2: Question 2 (for pull requests)
-
-git pull, to make sure your remote repo is up to date. git clean -d, to make sure that ypur working tree is clean.
-git rm -r <directory name> to remove an entire directory from the repository then git push to push the changes to the remote repo.
