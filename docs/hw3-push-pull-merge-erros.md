@@ -14,7 +14,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
 This is happening when someone else is pushing their commits to GitHub before you do.
-Dr. Liu went over this in the lecture on 02/02/2021, you can review also review that. This
+Dr. Liu went over this in the lecture on 02/02/2021, you can also review that. This
 document however, will goes over it step by step. You can also read through
 this article [https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
@@ -241,7 +241,7 @@ Changes to be committed:
 	new file:   gb522113/machine-b-log.jpg
 ```
 
-Now that all merge conflicts are fixed, Git sugesst that you finish the merging (remember we get into a conflict during a merge (after we pulled new update)),
+Now that all merge conflicts are fixed, Git suggests that you finish the merging (remember we get into a conflict during a merge (after we pulled new update)),
 as Git suggested, you run
 
 ```console
@@ -282,7 +282,7 @@ Merge remote-tracking branch 'origin/main'
 #            
 ```
 
-You can just save it and be done, but let take a look. Git tells you in the first commented block
+You can just save it and be done, but lets take a look. Git tells you in the first commented block
 that there is conflicts and you are finishing up a merge.
 
 In the second commented block is the message we see in `git status` with some lines removed.

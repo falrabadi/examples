@@ -9,7 +9,7 @@ For Makefile related examples, please see `make.example\d+`. For focus examples 
 
 ### Forking the repository
 
-First thing that you will notice is that you can not make any push to the repository directly. This is usually the case for all open-source projects.
+First thing that you will notice is that you cannot make any push to the repository directly. This is usually the case for all open-source projects.
 What you have to do is fork the repository to your own GitHub account. With this new repository, you will have full control over the
 repository including the ability to push commits.
 
