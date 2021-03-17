@@ -12,6 +12,7 @@ This is a simple project that contains some of the tools used in the class. For 
 - Catch2
 - Travis CI (The idea of integrating this into class is heavily influenced by Mr. Robert Foreman).
 - maybe Google Test Framework (using Docker image)
+- This repo is also used for students to practice git pull requests
 
 ## Git with commit message in Commitizen convention
 
