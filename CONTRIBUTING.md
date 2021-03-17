@@ -59,6 +59,20 @@ For HW9, TA will then goes over your pull request. If the TA request some change
 more commits that address the issues. When you push these new commits to your forked, GitHub should update pull request
 automatically.
 
+### Troubleshooting
+
+#### Already made a commit on master branch
+
+And this commit should not be included in the repository.
+
+What you can do is to
+
+1. Create a new branch at your latest commit on master branch.
+2. On master branch run `git reset --hard <commit-id>`. For HW9 of Spring 2020-2021, you can replace the
+   `commit-id>` with `ae4b482b6eba0d7083fef272f3c3e6eaa335b2c1`. For other cases, replace `<commit-id>` with
+   an appropriate one.
+3. Retrieve and merge new commits to your forked master branch (as described earlier).
+
 ## Technological stack
 
 Currently, the only CI/CD system that is used is netlify. It is used to deploy doxygen documentation to https://ou-cs3560-examples.netlify.app/.
